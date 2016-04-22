@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="3000989652">
+    <data-source source="LOCAL" name="jdbc" uuid="310acf3b-c632-4a6b-8ba2-f6dc516eac38">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/pcenter</jdbc-url>
+      <user-name>root</user-name>
+      <user-password>dfcbdfcedfc7dfc3dfc4</user-password>
+      <schema-pattern>pcenter.*</schema-pattern>
+      <default-schemas>pcenter.*</default-schemas>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+

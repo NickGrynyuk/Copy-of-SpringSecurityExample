@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="jdbc" uuid="310acf3b-c632-4a6b-8ba2-f6dc516eac38">
+    <database-info product="MySQL" version="5.0.51b-community-nt" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <schema name="" catalog="pcenter"/>
+    <table name="cindents" schema="" catalog="pcenter" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12" def="JzAn"/>
+      <column name="status" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12" def="J2FwcHJvdmFsJw=="/>
+      <column name="description" sqlType="VARCHAR" precision="5000" scale="0" nullable="true" jdbcType="12" def="JzAn"/>
+      <column name="image" sqlType="VARCHAR" precision="500" scale="0" nullable="true" jdbcType="12" def="JzAn"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="dindents" schema="" catalog="pcenter" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12" def="JzAn"/>
+      <column name="status" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12" def="J2FwcHJvdmFsJw=="/>
+      <column name="description" sqlType="VARCHAR" precision="5000" scale="0" nullable="true" jdbcType="12" def="JzAn"/>
+      <column name="image" sqlType="VARCHAR" precision="500" scale="0" nullable="true" jdbcType="12" def="JzAn"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="groups" schema="" catalog="pcenter" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="image" sqlType="VARCHAR" precision="500" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="FK_groups_users_groups" table="groups_users" schema="" catalog="pcenter" columns="group_id"/>
+    </table>
+    <table name="groups_users" schema="" catalog="pcenter" type="TABLE">
+      <column name="group_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <foreign-key name="FK_groups_users_groups" columns="group_id" ref-table="groups" ref-schema="" ref-catalog="pcenter" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="FK_groups_users_users" columns="user_id" ref-table="users" ref-schema="" ref-catalog="pcenter" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="FK_groups_users_groups" unique="false" columns="group_id"/>
+      <index name="FK_groups_users_users" unique="false" columns="user_id"/>
+    </table>
+    <table name="jindents" schema="" catalog="pcenter" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12" def="JzAn"/>
+      <column name="status" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12" def="J2FwcHJvdmFsJw=="/>
+      <column name="description" sqlType="VARCHAR" precision="5000" scale="0" nullable="true" jdbcType="12" def="JzAn"/>
+      <column name="image" sqlType="VARCHAR" precision="500" scale="0" nullable="true" jdbcType="12" def="JzAn"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="pindents" schema="" catalog="pcenter" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12" def="JzAn"/>
+      <column name="status" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12" def="J2FwcHJvdmFsJw=="/>
+      <column name="description" sqlType="VARCHAR" precision="5000" scale="0" nullable="true" jdbcType="12" def="JzAn"/>
+      <column name="image" sqlType="VARCHAR" precision="500" scale="0" nullable="true" jdbcType="12" def="JzAn"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="roles" schema="" catalog="pcenter" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12" def="JzAn"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="FK__roles" table="roles_users" schema="" catalog="pcenter" columns="role_id"/>
+    </table>
+    <table name="roles_users" schema="" catalog="pcenter" type="TABLE">
+      <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="role_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <foreign-key name="FK__roles" columns="role_id" ref-table="roles" ref-schema="" ref-catalog="pcenter" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="FK__users" columns="user_id" ref-table="users" ref-schema="" ref-catalog="pcenter" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="FK__roles" unique="false" columns="role_id"/>
+      <index name="FK__users" unique="false" columns="user_id"/>
+    </table>
+    <table name="users" schema="" catalog="pcenter" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="norders" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="name" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="lname" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="fname" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="email" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="password" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="image" sqlType="VARCHAR" precision="500" scale="0" nullable="true" jdbcType="12"/>
+      <column name="date" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="FK_groups_users_users" table="groups_users" schema="" catalog="pcenter" columns="user_id"/>
+      <exported-key name="FK__users" table="roles_users" schema="" catalog="pcenter" columns="user_id"/>
+    </table>
+  </data-source>
+</component>

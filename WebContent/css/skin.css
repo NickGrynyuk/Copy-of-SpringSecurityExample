@@ -1,0 +1,85 @@
+.jcarousel-skin-tango .jcarousel-container {
+}
+
+.jcarousel-skin-tango .jcarousel-container-horizontal {
+    width:940px;
+    margin: 50px auto;
+}
+
+.jcarousel-skin-tango .jcarousel-clip-horizontal {
+    width:  940px;
+    height: 454px;
+}
+.jcarousel-skin-tango .jcarousel-item {
+    width: 300px;
+    height: 454px;
+}
+.jcarousel-skin-tango .jcarousel-item-horizontal {
+	margin-left: 0;
+    margin-right: 20px;
+	position:relative !important;
+}
+
+.jcarousel-skin-tango .jcarousel-item-placeholder {
+    background: #fff;
+    color: #000;
+}
+/**
+ *  Horizontal Buttons
+ */
+.jcarousel-skin-tango .jcarousel-next-horizontal {
+    position: absolute;
+    top:137px;
+    left: -62px;
+    width: 42px;
+    height: 152px;
+    cursor: pointer;
+    background:url(../images/prev.png) 0 0 no-repeat;
+}
+
+
+
+
+.jcarousel-skin-tango .jcarousel-prev-horizontal {
+    position: absolute;
+    top:137px;
+    right: -62px;
+    width: 42px;
+    height: 152px;
+    cursor: pointer;
+    background:url(../images/next.png) 0px 0 no-repeat;
+}
+
+
+/**************************1111**************************/
+
+.jcarousel-skin-tango1 {width:871px; height:1209px; position:relative;}
+
+.jcarousel-skin-tango1 .jcarousel-clip {width:871px; height:1209px; overflow:hidden;}
+
+.jcarousel-skin-tango1 li {float:left !important; margin:0 1px 0 0; width:217px; height:1209px;}
+
+/*  Buttons  */
+.jcarousel-skin-tango1 .jcarousel-next {
+    position: absolute;
+    top:575px;
+    left: 0px;
+    width: 30px;
+    height: 60px;
+    cursor: pointer;
+	background:url(../images/next.png) no-repeat 0 0;
+}
+
+.jcarousel-skin-tango1 .jcarousel-next:hover {background:url(../images/next.png) no-repeat 0 -60px;}
+
+.jcarousel-skin-tango1 .jcarousel-prev {
+    position: absolute;
+    top: 575px;
+    right:0px;
+    width: 30px;
+    height: 60px;
+    cursor: pointer;
+    background:url(../images/prev.png) no-repeat 0 0;
+}
+
+.jcarousel-skin-tango1 .jcarousel-prev:hover {background:url(../images/prev.png) no-repeat 0 -60px;}
